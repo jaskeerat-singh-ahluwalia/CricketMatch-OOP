@@ -1,6 +1,6 @@
 class ODIMatch extends Match {
 
-
+    private static final int TOTAL_OVERS = 50;
     public ODIMatch (int currentScore,float currentOver,int targetScore){
         super(currentScore,currentOver,targetScore);
     }
@@ -19,6 +19,6 @@ class ODIMatch extends Match {
         int fractionalPart = (int) ((currentOver - integerPart) * 10);
         int currentBalls = integerPart*6 + fractionalPart;
 
-        return 50*6-currentBalls;
+        return TOTAL_OVERS*6-currentBalls;
     }
 }

@@ -1,5 +1,6 @@
 class T20Match extends Match {
 
+    private static final int TOTAL_OVERS = 20;
     public T20Match (int currentScore,float currentOver,int targetScore){
         super(currentScore,currentOver,targetScore);
     }
@@ -18,6 +19,6 @@ class T20Match extends Match {
         int fractionalPart = (int) ((currentOver - integerPart) * 10);
         int currentBalls = integerPart*6 + fractionalPart;
 
-        return 20*6-currentBalls;
+        return TOTAL_OVERS*6-currentBalls;
     }
 }
